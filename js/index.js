@@ -5,16 +5,14 @@ let btn = document.querySelector(".loadmore");
 let idNumbers = 0;
 
 async function getapi(url) {
-    const idResponse = await fetch(url);
-    var ids = await idResponse.json();
+    const idResponse = await axios.get(url);
     for(let i = 0; i<10; i++){
-        let id = ids[idNumbers];
-        console.log(idNumbers + " id: " + id);
+        let id = idResponse.data[idNumbers];
+        
         let storieUrl = `https://hacker-news.firebaseio.com/v0/item/${id}.json`;
-        const response2 = await fetch(storieUrl);
-        var data2 = await response2.json();
-        let unixTime = data2.time;
-        createCard(data2.title, data2.url, timeConverter(unixTime),data2.by);
+        const response2 = await axios.get(storieUrl);
+        let unixTime = response2.data.time;
+        createCard(response2.data.title, response2.data.url, timeConverter(unixTime),response2.data.by);
 
         idNumbers++;
     }

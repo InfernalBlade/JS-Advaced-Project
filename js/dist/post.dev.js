@@ -28,7 +28,6 @@ function createCard(title, url, date, by) {
   userContainer.innerText = "By " + by;
 
   if (url == null) {
-    console.log("not available");
     urlContainer.innerText = "Link not available";
     urlContainer.removeAttribute("href");
   }
