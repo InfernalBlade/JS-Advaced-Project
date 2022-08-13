@@ -1,12 +1,10 @@
 "use strict";
 
-var urlNewStories = "https://hacker-news.firebaseio.com/v0/newstories.json";
-var btn = document.querySelector(".loadmore");
-var idNumbers = 0;
+var urlTopStories = "https://hacker-news.firebaseio.com/v0/topstories.json";
 
-function getNewStories(url) {
+function getTopStories(url) {
   var idResponse, i, id, storieUrl, response2, unixTime;
-  return regeneratorRuntime.async(function getNewStories$(_context) {
+  return regeneratorRuntime.async(function getTopStories$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
@@ -18,8 +16,8 @@ function getNewStories(url) {
           i = 0;
 
         case 4:
-          if (!(i < 10)) {
-            _context.next = 16;
+          if (!(i < 5)) {
+            _context.next = 17;
             break;
           }
 
@@ -31,15 +29,16 @@ function getNewStories(url) {
         case 9:
           response2 = _context.sent;
           unixTime = response2.data.time;
-          newStories(response2.data.title, response2.data.url, timeConverter(unixTime), response2.data.by);
+          topStoriesCard(response2.data.title, response2.data.url, timeConverter(unixTime));
           idNumbers++;
+          console.log(storieUrl);
 
-        case 13:
+        case 14:
           i++;
           _context.next = 4;
           break;
 
-        case 16:
+        case 17:
         case "end":
           return _context.stop();
       }
@@ -47,7 +46,4 @@ function getNewStories(url) {
   });
 }
 
-getNewStories(urlNewStories);
-btn.addEventListener("click", function () {
-  getNewStories(urlNewStories);
-});
+getTopStories(urlTopStories);

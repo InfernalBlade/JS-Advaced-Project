@@ -1,5 +1,5 @@
 let mainContainer = document.querySelector(".cards");
-function createCard(title, url, date, by){
+function newStories(title, url, date, by){
     /* Create elements for card component */
 
     let wrapper = document.createElement("div");

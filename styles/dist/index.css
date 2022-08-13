@@ -13,7 +13,7 @@
   z-index: 1;
   top: 0;
   right: 0px;
-  background-color: rgb(6, 0, 19);
+  background-color: #060013;
   overflow-y: scroll;
   margin-right: 10px;
 }
@@ -21,8 +21,8 @@
   display: none;
 }
 .sidebar .topCard {
-  border-top: 1px solid rgb(165, 165, 165);
-  border-bottom: 1px solid rgb(165, 165, 165);
+  border-top: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
   width: 100%;
   height: auto;
   margin-block: 25px;
@@ -46,7 +46,7 @@
   font-size: 0.8rem;
   padding: 10px;
   margin-top: 15px;
-  color: rgb(172, 172, 172);
+  color: #acacac;
 }
 .sidebar h4 {
   font-size: 1rem;
@@ -56,13 +56,13 @@
 }
 
 body {
-  background-color: rgb(6, 0, 19);
+  background-color: #060013;
 }
 
 header {
   height: 10vh;
   width: 100%;
-  color: rgb(255, 255, 255);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +85,7 @@ header {
   text-align: center;
   height: 35vh;
   width: 50%;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid white;
   border-radius: 40px;
 }
 .cards .card .info {
@@ -101,11 +101,11 @@ header {
 }
 .cards .card a {
   font-size: 1rem;
-  color: rgb(110, 110, 110);
+  color: #6e6e6e;
   font-weight: bold;
 }
 .cards .card p {
-  color: rgb(110, 110, 110);
+  color: #6e6e6e;
   font-size: 1rem;
 }
 
@@ -131,6 +131,7 @@ header {
   .sidebar {
     display: none;
   }
+
   .cards .card h2 {
     font-size: 1.2rem;
   }
@@ -138,7 +139,7 @@ header {
     font-size: 0.7rem;
   }
   .cards .card p {
-    color: rgb(110, 110, 110);
+    color: #6e6e6e;
     font-size: 0.7rem;
   }
-}/*# sourceMappingURL=index.css.map */
+}

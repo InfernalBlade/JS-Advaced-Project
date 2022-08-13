@@ -2,7 +2,7 @@
 
 var mainContainer = document.querySelector(".cards");
 
-function createCard(title, url, date, by) {
+function newStories(title, url, date, by) {
   /* Create elements for card component */
   var wrapper = document.createElement("div");
   var titleContainer = document.createElement("h2");
